@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Refigo News | {{info.title}} </title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>{{info.title}}</h1>
+    <div>
+      {{info.points}} points | By {{info.author}} |
+      <a href="{{info.url}}" target="_blank">{{info.url}}</a>
+    </div>
+  </header>
+  <main>
+    {% for comment in comments %}
+    <div>
+      {% if not comment.author %}
+        [deleted]
+      {% else %}
+        <strong>{{comment.author}}:</strong>
+        <p></p>
+        <p>{{comment.comment_text|safe}}</p>
+        <p></p>
+      {% endif %}
+    </div>
+    <hr>
+    {% endfor %}
+  </main>
+</body>
+
+</html>
