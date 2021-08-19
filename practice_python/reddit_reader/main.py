@@ -35,12 +35,23 @@ subreddits = [
 
 app = Flask("DayEleven")
 
+@app.template_filter()
+def thousandFormat(value):
+    #value = float(value)
+    return "{:0,}".format(value)
+
 def get_subreddit_data(subreddit, agg_list):
   r_subreddit = requests.get(f"https://www.reddit.com/r/{subreddit}/top/?t=month", headers=headers)
   soup_subreddit = BeautifulSoup(r_subreddit.text, "html.parser")
   posts = soup_subreddit.find("div", {"class":"_31N0dvxfpsO6Ur5AKx4O5d"}).find_all("div", {"class":["_1oQyIsiPHYt6nx7VOmd1sz", "scrollerItem", "Post"]})
 
   for post in posts:
+    try:
+      if "promoted" == post.find("span", {"class":"_2oEYZXchPfHwcf9mTMGMg8"}).get_text():
+        print("Promoted, get out of here!")
+        continue
+    except:
+      pass
     title = post.find("h3", {"class":"_eYtD2XCVieq6emjKBH3m"}).get_text()
     try:
       link = post.find("a", {"class":"_3jOxDPIQ0KaOWpzvSQo-1s"})["href"]
