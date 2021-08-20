@@ -14,7 +14,6 @@ def save_to_file(name, jobs_info_lists):
   file.close()
   return
 
-
 def find_jobs(name, url):
   company_rq = requests.get(url)
   company_soup = BeautifulSoup(company_rq.text, "html.parser")
@@ -52,7 +51,6 @@ def find_jobs(name, url):
   save_to_file(name, jobs_info_lists)
   return
 
-
 def init():
   os.system("clear")
   alba_url = "http://www.alba.co.kr"
@@ -69,4 +67,3 @@ def init():
   print("Done! Goodbye~")
 
 init()
-
