@@ -61,6 +61,7 @@ print(chr(c + 1))
 a, b = input().split()
 print(int(a) - int(b))
 """
+
 #6035 : [기초-산술연산] 실수 2개 입력받아 곱 계산하기(설명)(py)
 """
 a, b = input().split()
@@ -95,6 +96,7 @@ print(result)
 n, p = input().split()
 print(int(n) ** int(t))
 """
+
 #6039 : [기초-산술연산] 실수 2개 입력받아 거듭제곱 계산하기(py)
 """
 n, p = input().split()
