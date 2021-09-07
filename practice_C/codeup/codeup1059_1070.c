@@ -77,11 +77,14 @@ int	main(void)
 
 	scanf("%d %d", &a, &b);
 	printf("  "BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
+	printf(" : %d", a);
 	printf("\n& ");
 	printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(b));
+	printf(" : %d", b);
 	printf("\n----------");
 	printf("\n  ");
 	printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a & b));
+	printf(" : %d", (a & b));
 	printf("\n");
 	return (0);
 }
@@ -120,12 +123,15 @@ int	main(void)
 
 	scanf("%d %d", &a, &b);
 	printf("  "BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
+	printf(" : %d", a);
 	printf("\n| ");
 	printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(b));
+	printf(" : %d", b);
 	printf("\n----------");
 	printf("\n  ");
 	c = (a | b);
 	printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(c));
+	printf(" : %d", c);
 	printf("\n");
 	return (0);
 }
@@ -164,12 +170,15 @@ int	main(void)
 
 	scanf("%d %d", &a, &b);
 	printf("  "BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
-	printf("\n| ");
+	printf(" : %d", a);
+	printf("\n^ ");
 	printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(b));
+	printf(" : %d", b);
 	printf("\n----------");
 	printf("\n  ");
 	c = (a ^ b);
 	printf(BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(c));
+	printf(" : %d", c);
 	printf("\n");
 	return (0);
 }
