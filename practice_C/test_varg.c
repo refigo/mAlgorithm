@@ -20,5 +20,6 @@ int	main(void)
 {
 	printf("%.2f\n", get_average(2, 5, 7));
 	printf("%.2f\n", get_average(6, 1, 2, 3, 4, 5, 6));
+	printf("%.3f\n", get_average(5, 4123, 714985, 2431689, 89234, 91267849));
 	return (0);
 }
