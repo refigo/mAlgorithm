@@ -107,6 +107,7 @@ int	main(void)
 	printf("%09.7d\n", 12345);
 	printf("%9.7d\n", 12345);
 	printf("%#7x\n", 12345);
+	printf("%-9.7d\n", 12345);
 	return (0);
 }
 
