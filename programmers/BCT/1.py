@@ -36,18 +36,21 @@ result = a * b
 print(result)
 
 # 대소문자 바꿔서 출력하기
+str = input()
+for ch in str:
+    if ch.isupper():
+        print(ch.lower(), end='')
+    else :
+        print(ch.upper(), end='')
+
+
+    # another
+print(input().swapcase())
 
 # 특수문자 바꿔서 출력하기
+print('!@#$%^&*(\\\'"<>?:;')
 
 
-
-
-
-
-
-
-
-
-
-
+    #another
+print(r'!@#$%^&*(\'"<>?:;')
 
